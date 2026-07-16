@@ -1,6 +1,6 @@
-import { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { gsap } from 'gsap';
+import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { gsap } from "gsap";
 
 interface HeroProps {
   onBegin: () => void;
@@ -16,17 +16,17 @@ export default function HeroSection({ onBegin }: HeroProps) {
       repeat: -1,
       yoyo: true,
       duration: 3,
-      ease: 'power1.inOut',
+      ease: "power1.inOut",
     });
   }, []);
 
   return (
-    <div 
+    <div
       ref={containerRef}
       className="relative flex flex-col items-center justify-center min-h-screen text-center z-10 select-none px-4"
     >
       <div className="max-w-4xl space-y-6">
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
@@ -34,9 +34,9 @@ export default function HeroSection({ onBegin }: HeroProps) {
         >
           An Interactive Gratitude Chronicle
         </motion.p>
-        
+
         <div className="space-y-4">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
@@ -44,15 +44,15 @@ export default function HeroSection({ onBegin }: HeroProps) {
           >
             Happy Birthday
           </motion.h1>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="text-3xl md:text-6xl font-semibold tracking-tight text-white/80"
           >
-            To My Friend,
+            To My Guiding Light,
           </motion.h2>
-          <motion.h3 
+          <motion.h3
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}

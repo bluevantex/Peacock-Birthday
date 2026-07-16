@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 // 1. Import the photo directly using a relative path
-import unclePhoto from "../assets/Big-T.png";
+import Photo from "../assets/Big-T.png";
 
 export default function PictureSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -27,7 +27,7 @@ export default function PictureSection() {
           <motion.img
             style={{ scale: imageScale }}
             // 2. Use the imported variable as the src
-            src={unclePhoto}
+            src={Photo}
             alt="My Uncle"
             className="w-full h-full object-cover filter brightness-[0.9] contrast-[1.05]"
           />

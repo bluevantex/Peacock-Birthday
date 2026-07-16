@@ -50,7 +50,7 @@ export default function HeroSection({ onBegin }: HeroProps) {
             transition={{ duration: 1.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="text-3xl md:text-6xl font-semibold tracking-tight text-white/80"
           >
-            To My Uncle,
+            To My Friend,
           </motion.h2>
           <motion.h3 
             initial={{ opacity: 0, y: 40 }}

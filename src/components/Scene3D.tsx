@@ -8,13 +8,13 @@ function FloatingParticles() {
   const pointsRef = useRef<THREE.Points>(null);
   const spherePositions = random.inSphere(new Float32Array(3000), { radius: 2 }) as Float32Array;
 
-  useFrame((state, delta) => {
-    if (pointsRef.current) {
-      pointsRef.current.rotation.y += delta * 0.05;
-      pointsRef.current.rotation.x += delta * 0.02;
-    }
-  });
-
+ 
+useFrame((_state, delta) => {
+  if (pointsRef.current) {
+    pointsRef.current.rotation.y += delta * 0.05;
+    pointsRef.current.rotation.x += delta * 0.02;
+  }
+});
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
       <Points ref={pointsRef} positions={spherePositions} stride={3} frustumCulled={false}>
